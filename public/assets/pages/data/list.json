@@ -1,0 +1,9 @@
+{
+    "windowStyle": "basic",
+    "title": "Lists of things",
+    "sub": "korin > home > lists",
+    "icon": "file-icon",
+    "resizable": false,
+    "unique": true,
+    "scroll": false
+}

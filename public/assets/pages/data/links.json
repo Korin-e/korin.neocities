@@ -1,0 +1,9 @@
+{
+    "windowStyle": "basic",
+    "title": "My Links",
+    "sub": "korin > home > links",
+    "icon": "file-icon",
+    "resizable": false,
+    "unique": true,
+    "scroll": false
+}

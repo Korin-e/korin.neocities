@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="column" id="profileimg">
+        <img class="readonly" src="" onclick="RandProfileImg();">
+        <p class="img-caption"><i>Tip: click this image</i></p>
+    </div>
+    <div class="column">
+        <h1>Welcome to my corner of the Internet</h1>
+
+        <a href="https://youtube.com/@Korin_e" target="_blank">
+            <button><img src="/assets/images/youtube.png">Youtube Main</button>
+        </a>
+        <a href="https://youtube.com/@Korin_alt" target="_blank">
+            <button><img src="/assets/images/youtube.png">Youtube Alt</button>
+        </a>
+        <br><br>
+
+        <button onclick="OpenWindow('links')">Other Links</button>
+        <p>This website is my personal project I made almost entirely from scratch. 
+            I'll constantly be working on it adding new features, pages, and secrets.
+            I hope you'll injoy your stay!</p>
+        <button onclick="OpenWindow('list')">Lists</button>
+        <div class="dropdown">
+            <button >Theme</button>
+            <div class="dropdown-content">
+                <button onclick="ChangeTheme('dark')">Dark</button>
+                <button onclick="ChangeTheme('light')">Light</button>
+                <button onclick="ChangeTheme('hell')">Hell</button>
+                <button onclick="ChangeTheme('hacker')">Hacker</button>
+            </div>
+        </div>
+        <button onclick="OpenWindow('catpics')">Kitty Pics</button>
+    </div>
+</div>
+<script>
+    RandProfileImg();
+    function RandProfileImg() {
+        $('#profileimg img').attr('src', 'assets/images/profiles/'+ (Math.floor(Math.random()*(24 - 0 + 1))) +'.png');
+    }
+    $('#Desktop').on('click', '#home.window .x-btn', function() {
+        window.close();
+    });
+</script>

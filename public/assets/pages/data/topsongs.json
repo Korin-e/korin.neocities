@@ -1,0 +1,9 @@
+{
+    "windowStyle": "basic",
+    "title": "Favorite Songs",
+    "sub": "korin > home > lists > topsongs",
+    "icon": "file-icon",
+    "resizable": false,
+    "unique": false,
+    "scroll": false
+}

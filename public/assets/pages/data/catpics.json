@@ -1,0 +1,9 @@
+{
+    "windowStyle": "gallery",
+    "title": "Kitty Pics",
+    "sub": "korin > home > gallery > carpics",
+    "icon": "file-icon",
+    "resizable": false,
+    "unique": true,
+    "scroll": true
+} 

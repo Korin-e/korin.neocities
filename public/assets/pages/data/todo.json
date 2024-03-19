@@ -1,0 +1,9 @@
+{
+    "windowStyle": "basic",
+    "title": "To Do List",
+    "sub": "korin > home > lists > todo",
+    "icon": "file-icon",
+    "resizable": false,
+    "unique": true,
+    "scroll": false
+}

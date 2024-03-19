@@ -1,0 +1,9 @@
+{
+    "windowStyle": "basic",
+    "title": "Korin Kins",
+    "sub": "korin > home > lists > kinlist",
+    "icon": "file-icon",
+    "resizable": false,
+    "unique": false,
+    "scroll": false
+}

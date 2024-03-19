@@ -1,0 +1,9 @@
+{
+    "windowStyle": "basic",
+    "title": "Kori On The Web",
+    "sub": "korin > home",
+    "icon": "home-icon",
+    "resizable": false,
+    "unique": true,
+    "scroll": false
+}
