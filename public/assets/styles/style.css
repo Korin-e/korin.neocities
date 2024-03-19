@@ -1,0 +1,216 @@
+:root {
+	--border-color: #ffffff;
+	--back-color: #d1ffec;
+	--primary-color: #59BA8C;
+	--secondary-color: #9fe3c3;
+	--secondary-color-hover: #9fe3c360;
+	--shadow-color: #25253880;
+	--header-text-color: white;
+	--text-color: black;
+	--wallpaper: url('../images/background-dark.png');
+}
+
+body {
+	background-color: #A0D6AE;
+	background-image: var(--wallpaper);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Courier New', Courier, monospace;
+	overflow: hidden;
+	color: var(--text-color);
+}
+
+/* == === Interactive === == */
+
+button {
+	font-family: 'Courier New', Courier, monospace;
+	background-color: var(--secondary-color);
+	border: 2px solid var(--border-color);
+	padding: 3px 5px 3px 7px;
+	box-shadow: inset 1px 2px var(--shadow-color), 2px 2px var(--shadow-color);
+	color: var(--text-color);
+	/*prevent buttons from being highlighted*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+button > img {
+	width: 20px;
+	padding-right: 5px;
+}
+button:active {
+	box-shadow: inset 2px 3px var(--shadow-color), 1px 1px var(--shadow-color);
+}
+button:hover {
+	background-color: var(--secondary-color-hover);
+}
+.x-btn {
+	font-family: 'Courier New', Courier, monospace;
+	background-color: transparent;
+	color: var(--header-text-color);
+	border: none;
+	box-shadow: inset 2px 2px #ffffff80, 2px 2px #2E2E2E80;
+	user-select: none;
+	margin-left: 10px;
+
+   	font-weight: bolder;
+	font-size: 90%;
+	transform: translate(0px, -2px);
+}
+.x-btn:active {
+	box-shadow: inset 2px 2px #2E2E2E80, 2px 2px #e2e2e280;
+}
+.x-btn:hover {
+	background-color: #ffffff46;
+}
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+}
+.dropdown-content {	
+	background-color: var(--back-color);
+	border: 2px solid var(--border-color);
+	box-shadow: inset 1px 2px var(--shadow-color), 2px 2px var(--shadow-color);
+	color: var(--text-color);
+	display: none;
+	position: absolute;
+	width: 110%;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content button {
+	display: block;
+	border: 0px;
+	margin: 0px;
+	box-shadow: 0px 0px;
+	width: 100%;
+}
+.dropdown-content button:hover {
+	background-color: var(--secondary-color-hover);
+  }
+
+.readonly { /*prevent highlighting and text cursor*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+a {
+	color: var(--border-color);
+	text-decoration: none;
+}
+a > button{
+	color: var(--primary-color);
+}
+
+/* == === base window styles === == */
+
+.window {
+	width: max-content;
+	height: fit-content;
+	margin: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--back-color);
+	border: 3px solid var(--border-color);
+	box-shadow: 10px 10px var(--shadow-color);
+	/*white-space: nowrap;*/
+	overflow: hidden;
+}
+.row {
+	display: flex;
+}
+
+/*--------vHEADERv---------*/
+.window-header {
+	background-color: var(--primary-color);
+	border-bottom: 2px solid var(--border-color);
+	color: var(--header-text-color);
+	box-shadow: inset 0px 3px var(--shadow-color), 0px 3px var(--shadow-color);
+	padding: 8px 5px 4px 10px;
+
+}
+.window-header > div {
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.window-header > div > div {
+	font-size: 125%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.window-title > img {
+	padding: 0px 5px 0px 0px;
+	transform: translate(0px, 2px);
+}
+.window-header > div > div + div {
+	text-align: right;
+	overflow: visible;
+}
+/*.window-header > div > div + div > button {
+	font-weight: bolder;
+	font-size: 90%;
+	transform: translate(0px, -2px);
+}*/
+/*--------^HEADER^---------*/
+/*-------vSUBHEADERv--------*/
+.window-subheader {
+	background-color: var(--secondary-color);
+	padding: 0px 0px 0px 10px;
+	border-bottom: 2px solid var(--border-color);
+	height: 15px;
+}
+.window-subheader > p {
+	margin: 3px 0px 0px 0px;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/*-------^SUBHEADER^--------*/
+/*--------vCONTENTv---------*/
+.window-content {
+	padding: 10px 10px 10px 10px;
+}
+
+/* == === window overides === == */
+
+#home {
+	width: 700px;
+	height: auto;
+	overflow:visible;
+}
+#home .column + .column {
+	margin-left: 15px;
+	overflow-wrap: break-word;
+}
+#home .column + .column > h1 {
+	margin-top: 0px;
+}
+#home .window-content #profileimg img {
+	width: 250px;
+	border: 3px solid var(--border-color);
+	box-shadow: 3px 3px var(--shadow-color);
+}
+#kinlist .window-content > * {
+	margin: 0px;
+}
+
+.img-caption {
+	color: var(--secondary-color);
+	margin-top: 0px;
+	font-size: 75%;
+}
